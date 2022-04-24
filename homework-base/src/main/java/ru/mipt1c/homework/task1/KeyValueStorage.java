@@ -1,6 +1,7 @@
 package ru.mipt1c.homework.task1;
 
 import java.io.Closeable;
+import java.io.IOException;
 import java.util.Iterator;
 
 /**
@@ -52,7 +53,7 @@ public interface KeyValueStorage<K, V> extends Closeable {
     /**
      * Приводит хранилище на диске в консистентное состояние на момент вызова. Может блокировать другие операции записи.
      */
-    default void flush() {
+    default void flush() throws IOException {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }
